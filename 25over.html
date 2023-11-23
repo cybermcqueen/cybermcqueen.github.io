@@ -61,10 +61,13 @@
             methods: {    // ajax request
                 async getData() {
                     const response = await fetch('tickets1.json')
-                    this.tickets = await response.json()
-                    tickets = data.filter( (item) => item.major == majSelect );     
+                    this.tickets = await response.json()    
                 },
-            }
+	getByTicket() { 
+		this.showTable = true
+		this.tickets = this.results.filter( (ticket.actual_speed - ticket.posted_speed) => ticket.speed == this.ticket );
+		}
+	    },
           })
       
       app.mount('#ticketApp')   //in which div to mount the vue app
